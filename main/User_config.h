@@ -109,12 +109,13 @@ char gateway_name[parameters_size * 2] = Gateway_Name;
 //#define valueAsASubject true
 
 /*-------------DEFINE THE MODULES YOU WANT BELOW----------------*/
-//Addons and module management, comment the Z line
+//Addons and module management, uncomment the Z line corresponding to the module you want to use
 
 //#define ZgatewayRF     "RF"       //ESP8266, Arduino, ESP32
 //#define ZgatewayIR     "IR"       //ESP8266, Arduino,         Sonoff RF Bridge
 //#define ZgatewayLORA   "LORA"       //ESP8266, Arduino, ESP32
 //#define ZgatewayPilight "Pilight" //ESP8266, Arduino, ESP32
+//#define ZgatewayWeatherStation "WeatherStation" //ESP8266, Arduino, ESP32
 //#define ZgatewayBT     "BT"       //ESP8266, ESP32
 //#define ZgatewayRF2    "RF2"      //ESP8266, Arduino, ESP32
 //#define ZgatewaySRFB   "SRFB"     //                          Sonoff RF Bridge
@@ -129,6 +130,7 @@ char gateway_name[parameters_size * 2] = Gateway_Name;
 //#define ZsensorTSL2561 "TSL2561"  //ESP8266, Arduino, ESP32
 //#define ZsensorBME280  "BME280"   //ESP8266, Arduino, ESP32
 //#define ZsensorDHT     "DHT"      //ESP8266, Arduino, ESP32,  Sonoff RF Bridge
+//#define ZsensorDS1820  "DS1820"   //ESP8266, Arduino, ESP32
 //#define ZsensorGPIOKeyCode "GPIOKeyCode" //ESP8266, Arduino, ESP32
 //#define ZsensorGPIOInput "GPIOInput" //ESP8266, Arduino, ESP32
 //#define ZmqttDiscovery "HADiscovery"//ESP8266, Arduino, ESP32, Sonoff RF Bridge
@@ -238,9 +240,7 @@ char gateway_name[parameters_size * 2] = Gateway_Name;
 #define subjectSYStoMQTT  "/SYStoMQTT"
 #define subjectMQTTtoSYSset "/commands/MQTTtoSYS/config"
 
-//#define subjectTRACEtoMQTT "OpenMQTTGateway/log" //uncomment if you want to see traces on OpenMQTTGateway/log topic
-
-/*-------------------ACTIVATE TRACES----------------------*/
-#define TRACE 1  // commented =  trace off, uncommented = trace on
+/*-------------------DEFINE LOG LEVEL----------------------*/
+#define LOG_LEVEL LOG_LEVEL_VERBOSE
 
 #endif
